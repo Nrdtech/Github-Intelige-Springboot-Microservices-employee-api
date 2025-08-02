@@ -28,7 +28,7 @@ public class EmployeeController {
    public ResponseEntity<String> saveEmployeeDetails(@RequestBody Employee emp){
        Employee saveEmployee= empServ.saveEmployeeDetails(emp);
 
-       return new ResponseEntity<String>("Saved Employee Data Successfully",HttpStatus.CREATED);
+       return new ResponseEntity<String>("Saved Employee Data Successfully for Id:"+saveEmployee.getId(),HttpStatus.CREATED);
    }
 
     @GetMapping("/all")
